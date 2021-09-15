@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function circle()
+            {
+                let radius = document.getElementById("rd").value;
+	            const PI = Math.PI;
+                radius = parseInt(radius);
+                if (Number.isNaN(radius)) {
+		        console.log('Please enter a valid radius');
+                document.getElementById("demo").innerHTML="Please enter valid radius";
+	            }
+                else
+                {
+                let area = PI * radius * radius;
+    	        console.log(`Area of circle is : ${area}`);
+                document.getElementById("demo").innerHTML="Area is: "+ area;  
+                } 
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="rd" required>
+            <input type="button" onclick="circle()" value="Check">
+            <p id="demo"></p>
+        </form>
+    </body>
+</html>
